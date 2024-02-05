@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="sidebar">
+      <div class="step-1 steps">
+        <h4 class="numero-sidebar selecao-step">1</h4>
+        <div>
+          <h6>Step 1</h6>
+          <h5>Your info</h5>
+        </div>
+      </div>
+      <div class="step-2 steps">
+        <h4 class="numero-sidebar">2</h4>
+        <div>
+          <h6>Step 2</h6>
+          <h5>Select plan</h5>
+        </div>
+      </div>
+      <div class="step-3 steps">
+        <h4 class="numero-sidebar">3</h4>
+        <div>
+          <h6>Step 3</h6>
+          <h5>Add-ons</h5>
+        </div>
+      </div>
+      <div class="step-4 steps">
+        <h4 class="numero-sidebar">4</h4>
+        <div>
+          <h6>Step 4</h6>
+          <h5>Summary</h5>
+        </div>
+      </div>
+    </div>
+
+    <div id="formulario">
+      <h1>Personal info</h1>
+      <p>Please provide your name, email address, and phone number.</p>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="e.g. Stephen King">
+
+        <label for="name">Email Address</label>
+        <input type="text" name="email" id="email" placeholder="e.g. stephenking@lorem.com">
+
+        <label for="number">Phone Number</label>
+        <input type="text" name="phone" id="phone-number" placeholder="e.g. +1 234 567 890">
+      </form>
+      <button class="next" type="submit">Next Step</button>
+    </div>
+
+    <div id="selecao-plano">
+      <h1>Select your plan</h1>
+      <p>You have the option of monthly or yearly billing.</p>
+      <div class="bloco-plano">
+        <div class="planos plano-selecionado">
+          <img class="img-plano" src="assets/images/icon-arcade.svg" alt="Arcade">
+          <h5 classs="nome-plano">Arcade</h5>
+          <h6 class="valor-plano">$9/mo</h6>
+          <h6 class="msg-anual">2 months free</h6>
+        </div>
+        <div class="planos">
+          <img class="img-plano" src="assets/images/icon-advanced.svg" alt="Advanced">
+          <h5 classs="nome-plano">Advanced</h5>
+          <h6 class="valor-plano">$12/mo</h6>
+          <h6 class="msg-anual">2 months free</h6>
+        </div>
+        <div class="planos">
+          <img class="img-plano" src="assets/images/icon-pro.svg" alt="Pro">
+          <h5 classs="nome-plano">Pro</h5>
+          <h6 class="valor-plano">$15/mo</h6>
+          <h6 class="msg-anual">2 months free</h6>
+        </div>
+      </div>
+      <div class="planos-mensal-anual">
+        <h5 class="plano-mensal" style="color: #01285a">Monthly</h5>
+        <div class="botao-escolha">
+          <div class="bolinha-botao"></div>
+        </div>
+        <h5 class="plano-anual" style="color: #a7a7b0">Yearly</h5>
+      </div>
+      <button class="go-back">Go Back</button>
+      <button class="next" type="submit">Next Step</button>
+    </div>
+
+    <div id="adicionais">
+      <h1>Pick add-ons</h1>
+      <p>Add-ons help enhance your gaming experience.</p>
+      <div class="bloco-adicionais">
+        <div class="selecao-add">
+          <input type="checkbox" id="add-1">
+          <div class="texto-add">
+            <h5 class="nome-servico">Online service</h5>
+            <p>Access to multiplayer games</p>
+          </div>
+          <h5 class="valor-add">+$1/mo</h5>
+        </div>
+        <div class="selecao-add">
+          <input type="checkbox" id="add-2">
+          <div class="texto-add">
+            <h5 class="nome-servico">Larger storage</h5>
+            <p>Extra 1TB of cloud save</p>
+          </div>
+          <h5 class="valor-add">+$2/mo</h5>
+        </div>
+        <div class="selecao-add">
+          <input type="checkbox" id="add-3">
+          <div class="texto-add">
+            <h5 class="nome-servico">Customizable Profile</h5>
+            <p>Custom theme on your profile</p>
+          </div>
+          <h5 class="valor-add">+$2/mo</h5>
+        </div>
+      </div>
+      <button class="go-back">Go Back</button>
+      <button class="next" type="submit">Next Step</button>
+    </div>
+
+    <div id="resumo-final">
+      <h1>Finishing up</h1>
+      <p>Double-check everything looks OK before confirming.</p>
+      <div class="bloco-itens">
+        <div class="plano-escolhido">
+          <div>
+            <span class="nome-plano-escolhido"></span>
+            <span class="modalidade-plano-escolhido">(Monthly)</span>
+            <div class="botao-mudar">Change</div>
+          </div>
+          <h4 class="valor-plano-final">$9/mo</h4>
+        </div>
+      </div>
+      <div class="resumo-total">
+        <div>
+          <span>Total</span>
+          <span class="modalidade-final">(per month)</span>
+        </div>
+        <h3 class="valor-total">$9/mo</h3>
+      </div>
+      <button class="go-back">Go Back</button>
+      <button class="confirmacao" type="submit">Confirm</button>
+    </div>
+
+    <div id="confirmacao-sub">
+      <img src="assets/images/icon-thank-you.svg">
+      <h1><strong>Thank you!</strong></h1>
+      <p>
+        Thanks for confirming your subscription! We hope you have fun 
+        using our platform. If you ever need support, please feel free 
+        to email us at support@loremgaming.com.
+      </p>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Amanda Aisha</a>.
+  </div>
+</body>
+<script rel="text/javascript" src="js/index.js"></script>
+</html>
